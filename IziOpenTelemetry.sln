@@ -12,11 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{69FABF49-333F-4761-B748-FB808AFD9921}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi0", "WebApi0\WebApi0.csproj", "{96562263-34F1-4BD2-B488-60EC460DC8E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi0", "WebApi0\WebApi0.csproj", "{96562263-34F1-4BD2-B488-60EC460DC8E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedConstants", "examples\SharedConstants\SharedConstants.csproj", "{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedConstants", "examples\SharedConstants\SharedConstants.csproj", "{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
