@@ -12,6 +12,8 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Instrumentation.Http;
 using OpenTelemetry.Exporter;
+using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 
 namespace IziHardGames.Observing.Tracing
 {
@@ -35,7 +37,14 @@ namespace IziHardGames.Observing.Tracing
 
                     builder
                     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddAttributes(atrs))
-                    .AddEntityFrameworkCoreInstrumentation()
+                    .AddEntityFrameworkCoreInstrumentation(opt =>
+                    {
+                        opt.EnrichWithIDbCommand = (activity, command) =>
+                        {
+                            activity.DisplayName = command.CommandText;
+                            activity.AddTag(nameof(command.CommandText), command.CommandText);
+                        };
+                    })
                     //.AddCassandraInstrumentation() // not released yet
                     .AddAspNetCoreInstrumentation(o =>
                     {

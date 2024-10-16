@@ -2,6 +2,7 @@
 using IziHardGames.Observing.Tracing;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApi0
 {
@@ -18,6 +19,8 @@ namespace WebApi0
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            //builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseInMemoryDatabase("iziinmemory"));
+            builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseNpgsql("server=127.0.0.1;uid=root;pwd=root;database=IziTest"));
 
             builder.Services.AddZipkin(new OtlpParams()
             {
