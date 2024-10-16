@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi0", "WebApi0\WebApi0.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedConstants", "examples\SharedConstants\SharedConstants.csproj", "{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziTracings", "src\IziTracings\IziTracings.csproj", "{841E47E6-C349-4FF6-B5B5-14436250EFB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841E47E6-C349-4FF6-B5B5-14436250EFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841E47E6-C349-4FF6-B5B5-14436250EFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841E47E6-C349-4FF6-B5B5-14436250EFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841E47E6-C349-4FF6-B5B5-14436250EFB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{96562263-34F1-4BD2-B488-60EC460DC8E6} = {34285702-DFD3-4BDB-A47A-71C5474E21EF}
 		{677ED9C9-3D8D-4E07-ABF8-A5000A77EC7B} = {34285702-DFD3-4BDB-A47A-71C5474E21EF}
+		{841E47E6-C349-4FF6-B5B5-14436250EFB3} = {F09E2456-DED1-4862-880C-24547B1132D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF8E4E75-7BCD-4116-8F84-0014467ACEDC}

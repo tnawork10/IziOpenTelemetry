@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\examples\SharedConstants\SharedConstants.csproj" />
+    <ProjectReference Include="..\src\IziTracings\IziTracings.csproj" />
   </ItemGroup>
 
 </Project>
