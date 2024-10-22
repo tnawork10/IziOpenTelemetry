@@ -35,6 +35,11 @@ namespace IziHardGames.Observing.Tracing
                 .WithTracing(builder =>
                 {
 
+                    for (int i = 0; i < otlpParams.SubSourcesNames.Length; i++)
+                    {
+                        builder.AddSource(otlpParams.SubSourcesNames[i]);
+                    }
+
                     builder
                     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddAttributes(atrs))
                     .AddEntityFrameworkCoreInstrumentation(opt =>
@@ -70,7 +75,7 @@ namespace IziHardGames.Observing.Tracing
                         };
                     })
                     .AddHttpClientInstrumentation()
-                    .AddSource(otlpParams.SourceName)
+                    .AddSource(otlpParams.MainSourceName)
                     .AddConsoleExporter()
                     .AddZipkinExporter(f => f.HttpClientFactory = () =>
                     {
@@ -85,8 +90,9 @@ namespace IziHardGames.Observing.Tracing
 
     public class OtlpParams
     {
-        public string SourceName { get; set; } = null!;
         public string ServiceName { get; set; } = null!;
         public string HostName { get; set; } = "gce.ru";
+        public string MainSourceName { get; set; } = null!;
+        public string[] SubSourcesNames { get; set; } = Array.Empty<string>();
     }
 }

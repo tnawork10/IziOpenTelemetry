@@ -4,6 +4,7 @@ using SharedConstants;
 
 namespace WebApi0
 {
+
     public static class DiagnosticConfig
     {
         public const string SourceName = DiagnosticNames.Izi0;

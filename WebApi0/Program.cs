@@ -20,13 +20,18 @@ namespace WebApi0
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             //builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseInMemoryDatabase("iziinmemory"));
-            builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseNpgsql("server=127.0.0.1;uid=root;pwd=root;database=IziTest"));
+            var evUser = Environment.GetEnvironmentVariable("IZHG_DB_POSTGRES_USER_DEV");
+            var evPwd = Environment.GetEnvironmentVariable("IZHG_DB_POSTGRES_PASSWORD_DEV");
+            var evServer = Environment.GetEnvironmentVariable("IZHG_DB_POSTGRES_SERVER_DEV");
+            var evPort = Environment.GetEnvironmentVariable("IZHG_DB_POSTGRES_PORT_DEV");
+            builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseNpgsql($"server={evServer};uid={evUser};pwd={evPwd};database=IziTest"));
 
             builder.Services.AddZipkin(new OtlpParams()
             {
                 HostName = "localhost",
                 ServiceName = "IziTestOtlpTracingsService",
-                SourceName = "IziTestOtlpTracingsSource"
+                MainSourceName = "IziTestOtlpTracingsSource",
+                SubSourcesNames = new string[] { ActivityExample.SourceName }
             });
 
             var app = builder.Build();
