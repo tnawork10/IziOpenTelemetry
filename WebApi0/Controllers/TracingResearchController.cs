@@ -25,7 +25,7 @@ namespace WebApi0.Controllers
         public async Task<IActionResult> PostCustomTracing()
         {
             var parentContext = Activity.Current?.Context ?? default(ActivityContext);
-            using var activity1 = ActivityExample.Source.StartActivity("My Custom activity1", ActivityKind.Internal, parentContext);
+            using var activity1 = ActivityExample.Source.StartActivity(ActivityExample.Example1 , ActivityKind.Internal, parentContext);
             using var activity2 = ActivityExample.Source.StartActivity("My Custom activity2", ActivityKind.Internal, parentContext);
             activity1?.SetTag("my-tag", "my-value");
             activity2?.SetTag("my-tag-2", "my-value-2");
