@@ -4,6 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <RootNamespace>IziHardGames.Observing.Tracing</RootNamespace>
-    <ProjectGuid></ProjectGuid>
+    <ProjectGuid>{59DF4CFF-035E-4548-BAAD-8B4A7EAC4FB4}</ProjectGuid>
   </PropertyGroup>
 </Project>

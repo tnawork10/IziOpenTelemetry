@@ -46,7 +46,7 @@ namespace IziHardGames.Observing.Tracing
                     {
                         opt.EnrichWithIDbCommand = (activity, command) =>
                         {
-                            activity.DisplayName = command.CommandText;
+                            //activity.DisplayName = command.CommandText;
                             activity.AddTag(nameof(command.CommandText), command.CommandText);
                         };
                     })
