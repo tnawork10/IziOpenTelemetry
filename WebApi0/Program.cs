@@ -3,6 +3,8 @@ using IziHardGames.Observing.Tracing;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using Microsoft.EntityFrameworkCore;
+using IziMetrics;
+using WebApi0.BackgroundServices;
 
 namespace WebApi0
 {
@@ -26,7 +28,10 @@ namespace WebApi0
             var evPort = Environment.GetEnvironmentVariable("IZHG_DB_POSTGRES_PORT_DEV");
             builder.Services.AddDbContextPool<SimpleDbContext>(x => x.UseNpgsql($"server={evServer};uid={evUser};pwd={evPwd};database=IziTest"));
 
-            builder.Services.AddZipkin(new OtlpParams()
+            builder.Services.AddHostedService<SomeGarbageProdcuer>();
+            builder.Services.AddOpenTelemetry()
+                .AddGraphanaAndPrometheusToOpenTelemetry()
+                .AddZipkin(new OtlpParams()
             {
                 HostName = "localhost",
                 ServiceName = "IziTestOtlpTracingsService",
@@ -46,7 +51,7 @@ namespace WebApi0
             app.UseAuthorization();
 
             app.MapControllers();
-
+            app.UseOpenTelemetryPrometheusScrapingEndpoint();
             app.Run();
         }
     }
