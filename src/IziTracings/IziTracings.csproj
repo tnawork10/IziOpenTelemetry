@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <RootNamespace>IziHardGames.Observing.Tracing</RootNamespace>
     <ProjectGuid>{59DF4CFF-035E-4548-BAAD-8B4A7EAC4FB4}</ProjectGuid>
+    <Author>Tran Ngoc Anh</Author>
+    <Company>IziHardGames</Company>
   </PropertyGroup>
 </Project>
