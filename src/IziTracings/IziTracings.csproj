@@ -7,4 +7,20 @@
     <Author>Tran Ngoc Anh</Author>
     <Company>IziHardGames</Company>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="OpenTelemetry"  />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.EntityFrameworkCore"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Process"  />
+    <PackageVersion Include="Npgsql.OpenTelemetry"  />
+    <PackageVersion Include="OpenTelemetry.Exporter.Console"  />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
+    <PackageVersion Include="OpenTelemetry.Exporter.Zipkin"  />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Cassandra" />
+  </ItemGroup>
 </Project>
