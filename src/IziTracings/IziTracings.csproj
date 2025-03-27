@@ -9,18 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="OpenTelemetry"  />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.EntityFrameworkCore"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Process"  />
-    <PackageVersion Include="Npgsql.OpenTelemetry"  />
-    <PackageVersion Include="OpenTelemetry.Exporter.Console"  />
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
-    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
-    <PackageVersion Include="OpenTelemetry.Exporter.Zipkin"  />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Cassandra" />
+    <PackageReference Include="OpenTelemetry"  />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Process"  />
+    <PackageReference Include="Npgsql.OpenTelemetry"  />
+    <PackageReference Include="OpenTelemetry.Exporter.Console"  />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Exporter.Zipkin"  />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Cassandra" />
+
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
   </ItemGroup>
 </Project>
